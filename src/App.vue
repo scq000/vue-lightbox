@@ -1,9 +1,17 @@
 <template>
 	<div id="app">
 		<h1>Without Options</h1>
-		<lightbox></lightbox>
+		<lightbox>
+			<div class="thumbnail" v-for="n in 4">
+				<a :href="'static/' + n + '.jpg'"><img :src="'static/' + n + '.jpg'"></a>
+			</div>
+		</lightbox>
 		<h1>With Option</h1>
-		<lightbox :options="{ margin: 20, nav: false, blur: true, minSize: 480 }"></lightbox>
+		<lightbox :options="{ margin: 20, nav: false, blur: true, minSize: 480 }">
+			<div class="thumbnail" v-for="n in 4">
+				<a :href="'static/' + n + '.jpg'"><img :src="'static/' + n + '.jpg'"></a>
+			</div>
+		</lightbox>
 	</div>
 </template>
 

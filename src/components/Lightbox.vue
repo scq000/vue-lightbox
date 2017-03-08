@@ -1,8 +1,6 @@
 <template>
     <div class="gallery">
-      <div class="thumbnail" v-for="n in 4">
-          <a :href="'static/' + n + '.jpg'"><img :src="'static/' + n + '.jpg'"></a>
-      </div>
+        <slot></slot>
     </div>
 </template>
 
