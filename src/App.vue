@@ -1,6 +1,9 @@
 <template>
 	<div id="app">
+		<h1>Without Options</h1>
 		<lightbox></lightbox>
+		<h1>With Option</h1>
+		<lightbox :options="{ margin: 20, nav: false, blur: true, minSize: 480 }"></lightbox>
 	</div>
 </template>
 

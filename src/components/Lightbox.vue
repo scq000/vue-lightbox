@@ -13,8 +13,14 @@ require('../../lib/jquery.lightbox.css');
 
 export default {
     name: 'lightbox',
+    props: {
+     options: {
+       type: Object,
+       required: false
+     }
+    },
     mounted() {
-        $(this.$el).find('a').lightbox();
+        $(this.$el).find('a').lightbox(this.options);
     },
 };
 </script>
